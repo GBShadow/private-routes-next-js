@@ -1,11 +1,11 @@
-import { AuthProvider } from '../providers/authProvider';
-import GlobalStyles from '../styles/global';
+import { AuthProvider } from '../contexts/auth';
 
-export default function App({ Component, pageProps }) {
+function App({ Component, pageProps }) {
   return (
     <AuthProvider>
-      <GlobalStyles />
       <Component {...pageProps} />
     </AuthProvider>
   );
 }
+
+export default App;
